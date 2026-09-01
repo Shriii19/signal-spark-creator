@@ -1,20 +1,21 @@
-const CANDLES = [
-  [30, 52, 0],
-  [40, 60, 1],
-  [34, 48, 0],
-  [44, 70, 1],
-  [52, 76, 1],
-  [46, 62, 0],
-  [58, 84, 1],
-  [64, 92, 1],
-  [55, 74, 0],
-  [66, 96, 1],
-  [72, 104, 1],
-  [62, 86, 0],
-  [76, 112, 1],
-  [84, 122, 1],
-  [78, 100, 0],
-  [88, 130, 1],
+type Candle = { body: number; wick: number; up: boolean };
+const CANDLES: Candle[] = [
+  { body: 30, wick: 52, up: false },
+  { body: 40, wick: 60, up: true },
+  { body: 34, wick: 48, up: false },
+  { body: 44, wick: 70, up: true },
+  { body: 52, wick: 76, up: true },
+  { body: 46, wick: 62, up: false },
+  { body: 58, wick: 84, up: true },
+  { body: 64, wick: 92, up: true },
+  { body: 55, wick: 74, up: false },
+  { body: 66, wick: 96, up: true },
+  { body: 72, wick: 104, up: true },
+  { body: 62, wick: 86, up: false },
+  { body: 76, wick: 112, up: true },
+  { body: 84, wick: 122, up: true },
+  { body: 78, wick: 100, up: false },
+  { body: 88, wick: 130, up: true },
 ];
 
 export function SignalTerminal() {
@@ -90,7 +91,7 @@ export function SignalTerminal() {
             <span className="font-mono text-[11px] text-primary">■ STREAMING</span>
           </div>
           <div className="mt-3 flex h-32 items-end gap-1.5">
-            {CANDLES.map(([body, wick, up], i) => (
+            {CANDLES.map(({ body, wick, up }, i) => (
               <div key={i} className="relative flex flex-1 flex-col items-center justify-end">
                 <div
                   className={`w-px ${up ? "bg-bull/50" : "bg-bear/50"}`}
