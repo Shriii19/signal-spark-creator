@@ -62,7 +62,7 @@ const TRACK = [
   ["Daily signals", "847", "Average across suite", "up"],
 ];
 
-const REVIEWS = [
+const REVIEWS: [string, string, string][] = [
   ["Arjun Mehta", "BankNifty", "The direction clarity is unreal. Entry, SL and target are on the chart before I click. No second-guessing at 9:20am."],
   ["Fatima Hassan", "Gold · UAE", "I trade XAUUSD exclusively. Entries are plotted cleanly, stops are realistic and targets hit with good frequency."],
   ["Deepak Nair", "Nifty & BankNifty", "The multi-timeframe logic separates this from every other tool. 15m for entry, 1h for direction — works beautifully."],
